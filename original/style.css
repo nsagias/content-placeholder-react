@@ -25,3 +25,28 @@ img {
   overflow: hidden;
   width: 350px;
 }
+
+.card-height {
+  height: 200px;
+}
+
+.card-header img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.card-content {
+  background-color: #fff;
+  padding: 30px;
+}
+
+.card-title {
+  height: 20px;
+  margin: 0;
+}
+
+.card-excerpt {
+  color: #777;
+  margin: 10px 0 20px;
+}
