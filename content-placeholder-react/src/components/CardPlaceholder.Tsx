@@ -2,25 +2,31 @@ import React, {useState} from "react";
 
 function CardPlaceholder () {
   const [contentLoading, setContentLoading] = useState();
-
-
-
-  const header = <img src="https://images.unsplash.com/photo-1484788984921-03950022c9ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1832&q=80" alt=""
-      />;
-  const title = "Lorem ipsum dolor sit amet.";
-  const excerpt = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, nesciunt.";
-  const profile_img = <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="" />;
-  const name = "Jane Doe";
-  const date = "Jan 12, 2022";
-
   const data = {
-    header,
-    title,
-    excerpt,
-    profile_img,
-    name,
-    date
+    header: "",
+    title: "",
+    excerpt: "",
+    profile_img: "",
+    name: "",
+    date: ""
   };
+
+  let header;
+  let title;
+  let excerpt;
+  let profile_img;
+  let name;
+  let date;
+
+  header = <img src="https://images.unsplash.com/photo-1484788984921-03950022c9ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1832&q=80" alt=""
+      />;
+  title = "Lorem ipsum dolor sit amet.";
+  excerpt = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, nesciunt.";
+  profile_img = <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="" />;
+  name = "Jane Doe";
+  date = "Jan 12, 2022";
+
+  
 
   
   // animated_bgs.forEach(bg => bg.classList.remove("animated-bg"));
@@ -38,7 +44,6 @@ function CardPlaceholder () {
           <div className="card-content">
             <h3 className="card-title animated-bg animated-bg-text" id="title">{data ? data.title : ""}</h3>
             <p className="card-excerpt" id="excerpt">{data.excerpt}
-           
               <span className="animated-bg animated-bg-text">&nbsp;</span>
               <span className="animated-bg animated-bg-text">&nbsp;</span>
               <span className="animated-bg animated-bg-text">&nbsp;</span>
