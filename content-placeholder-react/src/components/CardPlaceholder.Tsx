@@ -4,9 +4,11 @@ import React, {useState} from "react";
 
 interface Data {
   header: string;
+  headerAlt: string;
   title: string;
   excerpt: string;
-  profile_img: string;
+  profileImg: string;
+  profileImgAlt: string;
   name: string;
   date: string;
 }
@@ -16,9 +18,11 @@ function CardPlaceholder () {
   
   const data: Data = {
     header: "",
+    headerAlt: "",
     title: "",
     excerpt: "",
-    profile_img: "",
+    profileImg: "",
+    profileImgAlt: "",
     name: "",
     date: ""
   };
@@ -26,29 +30,33 @@ function CardPlaceholder () {
 
   // declare variables for inputs
   let header;
-  let title: string | null = null;
-  let excerpt: string | null = null;
-  let profile_img;
-  let name: string | null = null;
-  let date: string | null = null;
+  let headerData: string;
+  let headerAlt: string;
+  let title: string;
+  let excerpt: string;
+  let profileImg;
+  let profileImgAlt: string;
+  let profileImgData: string;
+  let name: string;
+  let date: string;
    
+
+  headerAlt = "";
+  headerData = "https://images.unsplash.com/photo-1484788984921-03950022c9ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1832&q=80";
   // data from same or multiple inputs
-  header = <img src="https://images.unsplash.com/photo-1484788984921-03950022c9ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1832&q=80" alt=""
-      />;
+  header = <img src={headerData} alt={headerAlt}/>;
   title = "Lorem ipsum dolor sit amet.";
   excerpt = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, nesciunt.";
-  profile_img = <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="" />;
+  
+  profileImgAlt = "";
+  profileImgData = "https://randomuser.me/api/portraits/women/45.jpg";
+
+  profileImg = <img src={profileImgData} alt={profileImgAlt} />;
   name = "Jane Doe";
   date = "Jan 12, 2022";
 
-  
 
-  
-  // animated_bgs.forEach(bg => bg.classList.remove("animated-bg"));
-  // animated_bg_texts.forEach(bg => bg.classList.remove("animated-bg-text"));
-
-  
-  // Add useEffect that sets content status, loading?
+  // Add useEffect that sets content status
   return (
     <>
         <div className="card">
@@ -65,7 +73,7 @@ function CardPlaceholder () {
             </p>
             <div className="author">
               <div className="profile-img animated-bg" id="profile_img">
-                {data.profile_img}
+                {data.profileImg}
               </div>
               <div className="author-info">
                 <strong className="animated-bg animated-bg-text" id="name">{data.name}</strong>
