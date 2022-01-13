@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 
 
+
 interface Data {
   header: string;
   title: string;
@@ -25,11 +26,11 @@ function CardPlaceholder () {
 
   // declare variables for inputs
   let header;
-  let title;
-  let excerpt;
+  let title: string | null = null;
+  let excerpt: string | null = null;
   let profile_img;
-  let name;
-  let date;
+  let name: string | null = null;
+  let date: string | null = null;
    
   // data from same or multiple inputs
   header = <img src="https://images.unsplash.com/photo-1484788984921-03950022c9ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1832&q=80" alt=""
