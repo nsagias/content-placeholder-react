@@ -1,6 +1,23 @@
-import React from "react";
+import React, {useState} from "react";
 
 function CardPlaceholder () {
+const [contentLoading, setContentLoading] = useState();
+
+
+ const header = `<img src="https://images.unsplash.com/photo-1484788984921-03950022c9ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1832&q=80" alt=""
+      />`;
+ const title = "Lorem ipsum dolor sit amet.";
+ const excerpt = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, nesciunt.";
+ const profile_img = `<img src="https://randomuser.me/api/portraits/women/45.jpg" alt="" />`;
+ const name = "Jane Doe";
+ const date = "Jan 12, 2022";
+
+  
+  // animated_bgs.forEach(bg => bg.classList.remove("animated-bg"));
+  // animated_bg_texts.forEach(bg => bg.classList.remove("animated-bg-text"));
+
+  
+  // Add useEffect that sets content status, loading?
   return (
     <>
         <div className="card">
