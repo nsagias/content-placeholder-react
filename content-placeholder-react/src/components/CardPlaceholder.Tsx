@@ -1,8 +1,19 @@
 import React, {useState} from "react";
 
+
+interface Data {
+  header: string;
+  title: string;
+  excerpt: string;
+  profile_img: string;
+  name: string;
+  date: string;
+}
+
 function CardPlaceholder () {
   const [contentLoading, setContentLoading] = useState();
-  const data = {
+  
+  const data: Data = {
     header: "",
     title: "",
     excerpt: "",
@@ -10,14 +21,17 @@ function CardPlaceholder () {
     name: "",
     date: ""
   };
+  
 
+  // declare variables for inputs
   let header;
   let title;
   let excerpt;
   let profile_img;
   let name;
   let date;
-
+   
+  // data from same or multiple inputs
   header = <img src="https://images.unsplash.com/photo-1484788984921-03950022c9ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1832&q=80" alt=""
       />;
   title = "Lorem ipsum dolor sit amet.";
