@@ -14,7 +14,7 @@ interface Data {
 }
 
 function CardPlaceholder () {
-  const [contentLoading, setContentLoading] = useState();
+  const [contentLoading, setContentLoading] = useState(true);
   
   const data: Data = {
     header: "",
@@ -55,29 +55,31 @@ function CardPlaceholder () {
   name = "Jane Doe";
   date = "Jan 12, 2022";
 
+  const isLoadingLogicBgText = contentLoading ? "animated-bg animated-bg-text" : "";
+  const isLoadingLogicBg = contentLoading ? "animated-bg" : "";
 
   // Add useEffect that sets content status
   return (
     <>
         <div className="card">
-          <div className="card-header animated-bg" id="header">
+          <div className={`card-header ${isLoadingLogicBg}`} id="header">
             {data.header}&nbsp;
           </div>
 
           <div className="card-content">
-            <h3 className="card-title animated-bg animated-bg-text" id="title">{data ? data.title : ""}</h3>
+            <h3 className={`card-title  ${isLoadingLogicBgText}`} id="title">{data ? data.title : ""}</h3>
             <p className="card-excerpt" id="excerpt">{data.excerpt}
-              <span className="animated-bg animated-bg-text">&nbsp;</span>
-              <span className="animated-bg animated-bg-text">&nbsp;</span>
-              <span className="animated-bg animated-bg-text">&nbsp;</span>
+              <span className={`${isLoadingLogicBgText}`}>&nbsp;</span>
+              <span className={`${isLoadingLogicBgText}`}>&nbsp;</span>
+              <span className={`${isLoadingLogicBgText}`}>&nbsp;</span>
             </p>
             <div className="author">
-              <div className="profile-img animated-bg" id="profile_img">
+              <div className={`profile-img ${isLoadingLogicBg}`} id="profile_img">
                 {data.profileImg}
               </div>
               <div className="author-info">
-                <strong className="animated-bg animated-bg-text" id="name">{data.name}</strong>
-                <small className="animated-bg animated-bg-text" id="date">{data.date}</small>
+                <strong className={`${isLoadingLogicBgText}`} id="name">{data.name}</strong>
+                <small className={`${isLoadingLogicBgText}`} id="date">{data.date}</small>
               </div>
             </div>
           </div>
