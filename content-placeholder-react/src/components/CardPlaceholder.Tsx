@@ -63,22 +63,22 @@ function CardPlaceholder () {
   // const profileImg = <img src={profileImgData} alt={profileImgAlt} />;
  
   const dataHandler = () => {
-      setHeader(profileData.header);
-      setHeaderImgData(profileData.headerImgData);
-      setHeaderImgAlt(profileData.headerImgAlt);
-      setTitle(profileData.title);
-      setExcerpt(profileData.excerpt);
-      setProfileImg(profileData.profileImg);
-      setProfileImgData(profileData.profileImgData);
-      setProfileImgAlt(profileData.profileImgAlt);
-      setName(profileData.name);
-      setDate(profileData.date);
-      setContentLoading(false);
+    setHeader(profileData.header);
+    setHeaderImgData(profileData.headerImgData);
+    setHeaderImgAlt(profileData.headerImgAlt);
+    setTitle(profileData.title);
+    setExcerpt(profileData.excerpt);
+    setProfileImg(profileData.profileImg);
+    setProfileImgData(profileData.profileImgData);
+    setProfileImgAlt(profileData.profileImgAlt);
+    setName(profileData.name);
+    setDate(profileData.date);
+    setContentLoading(false);
   };
 
   useEffect(() => {
     setInterval(dataHandler, 5000);
-  });
+  }, []);
  
   return (
     <>
