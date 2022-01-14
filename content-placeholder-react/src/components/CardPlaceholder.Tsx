@@ -54,8 +54,8 @@ function CardPlaceholder () {
   const [title, setTitle]= useState("");
   const [excerpt, setExcerpt]= useState("");
   const [profileImg, setProfileImg]= useState("");
-  const [profileImgData, setProfileImgAlt]= useState("");
-  const [profileImgAlt, setProfilImgAlt]= useState("");
+  const [profileImgData, setProfileImgData]= useState("");
+  const [profileImgAlt, setProfileImgAlt]= useState("");
   const [name, setName ]= useState("");
   const [date, setDate ]= useState("");
   
@@ -77,8 +77,19 @@ function CardPlaceholder () {
   };
 
   const dataHandler = () => {
-
+      setHeader("")
+      setHeaderImgData("")
+      setHeaderImgAlt("")
+      setTitle("")
+      setExcerpt("")
+      setProfileImg("")
+      setProfileImgData("")
+      setProfileImgAlt("")
+      setName("")
+      setDate("")
   };
+
+  setInterval(dataHandler, 5000)
 
 
   // Add useEffect that sets content status
