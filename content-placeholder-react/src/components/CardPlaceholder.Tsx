@@ -62,20 +62,6 @@ function CardPlaceholder () {
   // const header = <img src={headerImgData} alt={headerImgAlt}/>;
   // const profileImg = <img src={profileImgData} alt={profileImgAlt} />;
  
-  
-  const data: Data = {
-    header: "",
-    headerImgData: "",
-    headerImgAlt: "",
-    title: "",
-    excerpt: "",
-    profileImg: "",
-    profileImgData: "",
-    profileImgAlt: "",
-    name: "",
-    date: ""
-  };
-
   const dataHandler = () => {
       setHeader(profileData.header);
       setHeaderImgData(profileData.headerImgData);
@@ -94,9 +80,6 @@ function CardPlaceholder () {
     setInterval(dataHandler, 5000);
   });
  
-
-
-  // Add useEffect that sets content status
   return (
     <>
         <div className="card">
