@@ -4,24 +4,33 @@ import React, {useState} from "react";
 
 interface Data {
   header: string;
+  headerData: string;
   headerAlt: string;
   title: string;
   excerpt: string;
   profileImg: string;
+  profileImgData: string;
   profileImgAlt: string;
   name: string;
   date: string;
 }
 
+
+
 function CardPlaceholder () {
   const [contentLoading, setContentLoading] = useState(true);
+
+  const isLoadingLogicBgText = contentLoading ? "animated-bg animated-bg-text" : "";
+  const isLoadingLogicBg = contentLoading ? "animated-bg" : "";
   
   const data: Data = {
     header: "",
+    headerData: "",
     headerAlt: "",
     title: "",
     excerpt: "",
     profileImg: "",
+    profileImgData: "",
     profileImgAlt: "",
     name: "",
     date: ""
@@ -55,8 +64,7 @@ function CardPlaceholder () {
   name = "Jane Doe";
   date = "Jan 12, 2022";
 
-  const isLoadingLogicBgText = contentLoading ? "animated-bg animated-bg-text" : "";
-  const isLoadingLogicBg = contentLoading ? "animated-bg" : "";
+
 
   // Add useEffect that sets content status
   return (
