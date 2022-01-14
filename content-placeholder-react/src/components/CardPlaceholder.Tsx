@@ -23,18 +23,22 @@ const profileImgAlt = "";
 const profileImgData = "https://randomuser.me/api/portraits/women/45.jpg";
 const name = "Jane Doe";
 const date = "Jan 12, 2022";
+const header = <img src={headerImgData} alt={headerImgAlt}/>;
+const profileImg = <img src={profileImgData} alt={profileImgAlt} />;
 
-const data: Data = {
-  header: "",
-  headerImgData: "",
-  headerImgAlt: "",
-  title: "",
-  excerpt: "",
-  profileImg: "",
-  profileImgData: "",
-  profileImgAlt: "",
-  name: "",
-  date: ""
+ 
+
+const profileData: Data = {
+  header,
+  headerImgData,
+  headerImgAlt,
+  title,
+  excerpt,
+  profileImg,
+  profileImgData,
+  profileImgAlt,
+  name,
+  date
 };
 
 
@@ -44,19 +48,21 @@ function CardPlaceholder () {
   const isLoadingLogicBgText = contentLoading ? "animated-bg animated-bg-text" : "";
   const isLoadingLogicBg = contentLoading ? "animated-bg" : "";
   
-  const [,]= useState("");
-  const [,]= useState("");
-  const [,]= useState("");
-  const [,]= useState("");
-  const [,]= useState("");
-  const [,]= useState("");
-  const [,]= useState("");
-  const [,]= useState("");
+  const [header, setHeader]= useState("");
+  const [headerImgData, setHeaderImgData]= useState("");
+  const [headerImgAlt, setHeaderImgAlt]= useState("");
+  const [title, setTitle]= useState("");
+  const [excerpt, setExcerpt]= useState("");
+  const [profileImg, setProfileImg]= useState("");
+  const [profileImgData, setProfileImgAlt]= useState("");
+  const [profileImgAlt, setProfilImgAlt]= useState("");
+  const [name, setName ]= useState("");
+  const [date, setDate ]= useState("");
+  
+  // const header = <img src={headerImgData} alt={headerImgAlt}/>;
+  // const profileImg = <img src={profileImgData} alt={profileImgAlt} />;
  
-  const header = <img src={headerImgData} alt={headerImgAlt}/>;
-  const profileImg = <img src={profileImgData} alt={profileImgAlt} />;
-
- 
+  
   const data: Data = {
     header: "",
     headerImgData: "",
@@ -70,28 +76,33 @@ function CardPlaceholder () {
     date: ""
   };
 
+  const dataHandler = () => {
+
+  };
+
+
   // Add useEffect that sets content status
   return (
     <>
         <div className="card">
           <div className={`card-header ${isLoadingLogicBg}`} id="header">
-            {data.header}&nbsp;
+            {header}&nbsp;
           </div>
 
           <div className="card-content">
-            <h3 className={`card-title  ${isLoadingLogicBgText}`} id="title">{data ? data.title : ""}</h3>
-            <p className="card-excerpt" id="excerpt">{data.excerpt}
+            <h3 className={`card-title  ${isLoadingLogicBgText}`} id="title">{title ? title : ""}</h3>
+            <p className="card-excerpt" id="excerpt">{excerpt}
               <span className={`${isLoadingLogicBgText}`}>&nbsp;</span>
               <span className={`${isLoadingLogicBgText}`}>&nbsp;</span>
               <span className={`${isLoadingLogicBgText}`}>&nbsp;</span>
             </p>
             <div className="author">
               <div className={`profile-img ${isLoadingLogicBg}`} id="profile_img">
-                {data.profileImg}
+                {profileImg}
               </div>
               <div className="author-info">
-                <strong className={`${isLoadingLogicBgText}`} id="name">{data.name}</strong>
-                <small className={`${isLoadingLogicBgText}`} id="date">{data.date}</small>
+                <strong className={`${isLoadingLogicBgText}`} id="name">{name}</strong>
+                <small className={`${isLoadingLogicBgText}`} id="date">{date}</small>
               </div>
             </div>
           </div>
