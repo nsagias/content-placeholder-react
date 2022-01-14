@@ -15,6 +15,28 @@ interface Data {
   date: string;
 }
 
+const headerImgAlt = "";
+const headerImgData = "https://images.unsplash.com/photo-1484788984921-03950022c9ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1832&q=80";
+const title = "Lorem ipsum dolor sit amet.";
+const excerpt = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, nesciunt.";
+const profileImgAlt = "";
+const profileImgData = "https://randomuser.me/api/portraits/women/45.jpg";
+const name = "Jane Doe";
+const date = "Jan 12, 2022";
+
+const data: Data = {
+  header: "",
+  headerImgData: "",
+  headerImgAlt: "",
+  title: "",
+  excerpt: "",
+  profileImg: "",
+  profileImgData: "",
+  profileImgAlt: "",
+  name: "",
+  date: ""
+};
+
 
 function CardPlaceholder () {
   const [contentLoading, setContentLoading] = useState(true);
@@ -31,22 +53,10 @@ function CardPlaceholder () {
   const [,]= useState("");
   const [,]= useState("");
  
-
-  const headerImgAlt = "";
-  const headerImgData = "https://images.unsplash.com/photo-1484788984921-03950022c9ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1832&q=80";
   const header = <img src={headerImgData} alt={headerImgAlt}/>;
-  const title = "Lorem ipsum dolor sit amet.";
-  const excerpt = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, nesciunt.";
-  
-  const profileImgAlt = "";
-  const profileImgData = "https://randomuser.me/api/portraits/women/45.jpg";
-
   const profileImg = <img src={profileImgData} alt={profileImgAlt} />;
-  const name = "Jane Doe";
-  const date = "Jan 12, 2022";
+
  
-
-
   const data: Data = {
     header: "",
     headerImgData: "",
@@ -59,8 +69,6 @@ function CardPlaceholder () {
     name: "",
     date: ""
   };
-
-
 
   // Add useEffect that sets content status
   return (
