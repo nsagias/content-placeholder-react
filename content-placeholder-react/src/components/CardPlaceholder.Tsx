@@ -4,8 +4,8 @@ import React, {useState} from "react";
 
 interface Data {
   header: any;
-  headerData: string; 
-  headerAlt: string;
+  headerImgData: string; 
+  headerImgAlt: string;
   title: string;
   excerpt: string;
   profileImg: any;
@@ -16,17 +16,25 @@ interface Data {
 }
 
 
-
 function CardPlaceholder () {
   const [contentLoading, setContentLoading] = useState(true);
 
   const isLoadingLogicBgText = contentLoading ? "animated-bg animated-bg-text" : "";
   const isLoadingLogicBg = contentLoading ? "animated-bg" : "";
   
+  const [,]= useState("");
+  const [,]= useState("");
+  const [,]= useState("");
+  const [,]= useState("");
+  const [,]= useState("");
+  const [,]= useState("");
+  const [,]= useState("");
+  const [,]= useState("");
+ 
 
-  const headerAlt = "";
-  const headerData = "https://images.unsplash.com/photo-1484788984921-03950022c9ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1832&q=80";
-  const header = <img src={headerData} alt={headerAlt}/>;
+  const headerImgAlt = "";
+  const headerImgData = "https://images.unsplash.com/photo-1484788984921-03950022c9ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1832&q=80";
+  const header = <img src={headerImgData} alt={headerImgAlt}/>;
   const title = "Lorem ipsum dolor sit amet.";
   const excerpt = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, nesciunt.";
   
@@ -36,12 +44,13 @@ function CardPlaceholder () {
   const profileImg = <img src={profileImgData} alt={profileImgAlt} />;
   const name = "Jane Doe";
   const date = "Jan 12, 2022";
+ 
 
 
   const data: Data = {
-    header,
-    headerData: "",
-    headerAlt: "",
+    header: "",
+    headerImgData: "",
+    headerImgAlt: "",
     title: "",
     excerpt: "",
     profileImg: "",
