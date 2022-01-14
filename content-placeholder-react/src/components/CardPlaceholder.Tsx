@@ -3,12 +3,12 @@ import React, {useState} from "react";
 
 
 interface Data {
-  header: string;
-  headerData: string;
+  header: any;
+  headerData: string; 
   headerAlt: string;
   title: string;
   excerpt: string;
-  profileImg: string;
+  profileImg: any;
   profileImgData: string;
   profileImgAlt: string;
   name: string;
@@ -23,8 +23,23 @@ function CardPlaceholder () {
   const isLoadingLogicBgText = contentLoading ? "animated-bg animated-bg-text" : "";
   const isLoadingLogicBg = contentLoading ? "animated-bg" : "";
   
+
+  const headerAlt = "";
+  const headerData = "https://images.unsplash.com/photo-1484788984921-03950022c9ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1832&q=80";
+  const header = <img src={headerData} alt={headerAlt}/>;
+  const title = "Lorem ipsum dolor sit amet.";
+  const excerpt = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, nesciunt.";
+  
+  const profileImgAlt = "";
+  const profileImgData = "https://randomuser.me/api/portraits/women/45.jpg";
+
+  const profileImg = <img src={profileImgData} alt={profileImgAlt} />;
+  const name = "Jane Doe";
+  const date = "Jan 12, 2022";
+
+
   const data: Data = {
-    header: "",
+    header,
     headerData: "",
     headerAlt: "",
     title: "",
@@ -35,34 +50,6 @@ function CardPlaceholder () {
     name: "",
     date: ""
   };
-  
-
-  // declare variables for inputs
-  let header;
-  let headerData: string;
-  let headerAlt: string;
-  let title: string;
-  let excerpt: string;
-  let profileImg;
-  let profileImgAlt: string;
-  let profileImgData: string;
-  let name: string;
-  let date: string;
-   
-
-  headerAlt = "";
-  headerData = "https://images.unsplash.com/photo-1484788984921-03950022c9ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1832&q=80";
-  // data from same or multiple inputs
-  header = <img src={headerData} alt={headerAlt}/>;
-  title = "Lorem ipsum dolor sit amet.";
-  excerpt = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, nesciunt.";
-  
-  profileImgAlt = "";
-  profileImgData = "https://randomuser.me/api/portraits/women/45.jpg";
-
-  profileImg = <img src={profileImgData} alt={profileImgAlt} />;
-  name = "Jane Doe";
-  date = "Jan 12, 2022";
 
 
 
