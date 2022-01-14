@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 
 
 
@@ -77,19 +77,23 @@ function CardPlaceholder () {
   };
 
   const dataHandler = () => {
-      setHeader("")
-      setHeaderImgData("")
-      setHeaderImgAlt("")
-      setTitle("")
-      setExcerpt("")
-      setProfileImg("")
-      setProfileImgData("")
-      setProfileImgAlt("")
-      setName("")
-      setDate("")
+      setHeader(profileData.header);
+      setHeaderImgData(profileData.headerImgData);
+      setHeaderImgAlt(profileData.headerImgAlt);
+      setTitle(profileData.title);
+      setExcerpt(profileData.excerpt);
+      setProfileImg(profileData.profileImg);
+      setProfileImgData(profileData.profileImgData);
+      setProfileImgAlt(profileData.profileImgAlt);
+      setName(profileData.name);
+      setDate(profileData.date);
+      setContentLoading(false);
   };
 
-  setInterval(dataHandler, 5000)
+  useEffect(() => {
+    setInterval(dataHandler, 5000);
+  });
+ 
 
 
   // Add useEffect that sets content status
